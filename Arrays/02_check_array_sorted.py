@@ -23,16 +23,9 @@ class Solution:
         for element in nums:
             if element >= previous_element:
                 previous_element = element
-                continue
             else:
                 return False
         return True
         
 obj = Solution()
-collection_array = [1, 2, 1, 4, 5]
-largest_element = obj.isSorted(collection_array)
-
-if largest_element is True:
-    print(f"The array is Sorted")
-else:
-    print("The array is not Sorted")
+largest_element = obj.isSorted([1, 2, 1, 4, 5])
