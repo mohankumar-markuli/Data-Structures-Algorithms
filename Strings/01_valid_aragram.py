@@ -31,3 +31,5 @@ class Solution:
         return True
     
 sol = Solution()
+print(sol.anagramStrings("dog","cat"))
+print(sol.anagramStrings("anagram","nagaram"))
