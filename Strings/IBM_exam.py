@@ -17,3 +17,4 @@ class Solution:
         return result
 sol = Solution()
 print(sol.anagramStrings(['(','(())','((()(())','']))
+print(sol.anagramStrings(['()))))(((','(())','((()(())','']))
