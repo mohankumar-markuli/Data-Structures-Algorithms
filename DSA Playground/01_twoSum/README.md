@@ -23,7 +23,7 @@ Example 3:
 ```
 Constraints: <br>
 ```
-    2 <= nums.length <= 104 <br>
-    -109 <= nums[i] <= 109<br>
-    -109 <= target <= 109<br>
+2 <= nums.length <= 104 <br>
+-109 <= nums[i] <= 109<br>
+-109 <= target <= 109<br>
 ```
