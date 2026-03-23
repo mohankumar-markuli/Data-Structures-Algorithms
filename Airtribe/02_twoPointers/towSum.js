@@ -1,4 +1,5 @@
-/* Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+/* Problem :
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
 You can return the answer in any order.
 
@@ -22,52 +23,31 @@ Only one valid answer exists.
 Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity? (important)
  */
 
-// approch 1 - O(n2)
 
-const twoSumSolution1 = function (arr, target) {
+const twoSum = function (arr, target) {
     const output = new Array;
-
-    for(let i=0;i<arr.length;i++){
-        for(let j=i+1;j<arr.length;j++){
-            if(arr[i]+arr[j]==target){
-                output.push(i,j);
-            }
-        }
-    }
-    return output;
-};
-
-// approch-2 O(n)
-
-const twoSumSolution2 = function (arr, target) {
-    const output = new Array;
-
-    const sortedArray = arr.sort((a,b)=>a-b);
-
     let s = 0
-    let e = sortedArray.length - 1;
+    let e = arr.length - 1;
 
     while (s < e) {
-        const sum = sortedArray[s] + sortedArray[e];    
+        const sum = arr[s] + arr[e];
         if (sum == target) {
-            console.log(s, e)
-            output.push(s, e);
+            console.log(s,e)
+            output.push(s,e);
         }
         if (sum > target) e--;
         else s++;
     }
-
-    const indexA = arr.search()
+    return output;
 }
 
-const collection = [1, 2, 3, 5, 8, 13, 21];
-const example1 = [2, 7, 11, 15]
+const collection  = [1, 2, 3, 5, 8, 13, 21];
+const example1 = [2,7,11,15]
 
-const example2 = [3, 2, 4] // failed as the array is not sorted
+const example2 = [3,2,4]// failed as the array is not sorted
 // two pointer approch works only for the sorted array with decreasing range on processing
 
-
-const example3 = [3, 3]
+const example3 = [3,3]
 
 const result = twoSum(example2, 6);
 console.log(result);
