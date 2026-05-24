@@ -15,8 +15,8 @@ const twoSum = function (arr, target) {
     while (s < e) {
         const sum = arr[s] + arr[e];
         if (sum == target) {
-            console.log(s,e)
-            output.push(s,e);
+            console.log(s, e)
+            output.push(s, e);
         }
         if (sum > target) e--;
         else s++;
@@ -24,13 +24,13 @@ const twoSum = function (arr, target) {
     return output;
 }
 
-const collection  = [1, 2, 3, 5, 8, 13, 21];
-const example1 = [2,7,11,15]
+const collection = [1, 2, 3, 5, 8, 13, 21];
+const example1 = [2, 7, 11, 15]
 
-const example2 = [3,2,4]// failed as the array is not sorted
+const example2 = [3, 2, 4]// failed as the array is not sorted
 // two pointer approch works only for the sorted array with decreasing range on processing
 
-const example3 = [3,3]
+const example3 = [3, 3]
 
 const result = twoSum(example2, 6);
 console.log(result);
